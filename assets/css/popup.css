@@ -1,0 +1,8 @@
+.btn-list {
+  list-style: none;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 0;
+}

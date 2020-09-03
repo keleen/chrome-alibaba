@@ -1,0 +1,41 @@
+{
+  "name": "chrome-alibaba",
+  "version": "1.0",
+  "description": "打包下载 1688 的商品的主图和详情的图片",
+  "manifest_version": 2,
+  "icons": {
+    "16": "assets/img/icon_16.png",
+    "48": "assets/img/icon_48.png",
+    "128": "assets/img/icon_128.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "browser_action": {
+    "default_icon": "assets/img/icon_16.png",
+		"default_title": "我是pageAction",
+		"default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>", "http://detail.1688.com/*", "https://detail.1688.com/*"],
+      "js": ["assets/vendor/jquery.min.js","assets/vendor/jszip.min.js", "assets/js/parse.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+		"tabs",
+		"notifications",
+		"webRequest",
+		"webRequestBlocking",
+		"storage",
+		"http://*/*",
+		"https://*/*"
+  ],
+  "homepage_url": "https://www.baidu.com",
+  "options_page": "options.html",
+  "omnibox": { "keyword" : "go" },
+  "devtools_page": "devtools.html"
+
+}
