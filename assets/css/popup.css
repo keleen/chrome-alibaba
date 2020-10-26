@@ -6,3 +6,11 @@
   text-align: center;
   padding-left: 0;
 }
+
+.btn-list li {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 5px;
+  border-bottom: 1px dashed #efefef;
+  cursor: pointer;
+}
